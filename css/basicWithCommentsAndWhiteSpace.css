@@ -1,0 +1,247 @@
+/* CSS Document */
+/* CSS RESET
+------------------------------------------------ */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+/* GENERAL
+---------------------------------------------- */
+
+@font-face {
+    font-family: Gotham;
+    src: url("../font/Gotham-Book.woff") format("woff"),
+		url("../font/Gotham-Book.otf") format("opentype"),
+		url("../font/Gotham-Book.svg") format("svg");
+}
+
+@font-face {
+    font-family: Gotham;
+    font-weight: bold;
+    src: url("../font/Gotham-Bold.woff") format("woff"),
+		url("../font/Gotham-Bold.otf") format("opentype"),
+		url("../font/Gotham-Bold.svg") format("svg");
+}
+body {
+	background-color: #606060;
+	color: #000000;
+	font: 100% "Gotham", Verdana, sans-serif;
+}
+#holder {
+	background-color: #FFFFFF;
+	margin:20px auto;
+}
+
+header {
+	padding-top:30px;
+}
+header #logo {
+	display: block;
+	width:287px; /* Default to desktop */
+	height:117px;  /* Default to desktop */
+	margin: 0px auto 50px auto;
+}
+footer {
+	padding-bottom:5px;
+	margin-top:5px;
+	text-align:center;
+	color: #CCCCCC;
+	font: 60% "Gotham", Verdana, sans-serif;
+}
+nav {
+	padding-left:70px;
+	margin-bottom: 20px;
+	font-size:12px;
+	width:100%;
+}
+
+ul {
+	list-style: none;
+}
+
+li {
+	display: inline-block;
+	padding-right: 125px;
+}
+
+a {
+	text-decoration: none;
+	color:#9F9999;
+}
+
+a:hover {
+	color: #0000FF;
+}
+#socialmedia {
+	display: block;
+	width:15px;
+	height:15px;
+	background: url("../image/inLogo.png") no-repeat left;
+	float:right;
+	margin-left:15px;
+}
+article {
+	padding-left:70px;
+	padding-top:50px;
+	margin-bottom:20px;
+	padding-bottom:50px;
+}
+section {
+	max-width: 500px; /*400*/
+	margin-bottom: 25px;
+	font-size:15px;
+}
+section ul li {
+		display: block;
+	}
+section.fill {
+	padding-bottom:100px;
+}
+section ul {
+  margin: 0;
+}
+section ul {
+  list-style-type: none;
+  padding-top:8px;
+}
+section ul > li {
+  text-indent: -5px;
+  padding-bottom:5px;
+}
+section ul > li:before {
+  content: "-";
+  text-indent: -5px;
+}
+/* CSS Document Media Queries */
+
+/*----------------------*/
+/* Mobile Phones  450px */
+/***********************/
+@media only screen and (max-width:450px) {
+	#holder {
+		max-width:325px;
+		height:auto;
+}
+	#theButton {
+		width:26px;
+		height:16px;
+		margin-bottom:25px;
+		margin-left:15px;
+		background: url("../image/mobileMenu.png") no-repeat left;
+	}
+	#theButton.open {
+		background: url("../image/mobileMenuOpen.png") no-repeat left;
+	}
+	header #logo {
+		width:256px;
+		height:100px;
+		margin-bottom:25px;
+		background: url("../image/logo.png") no-repeat center;
+		margin-left:30px;
+	}
+	#navigation {
+		display:none;
+		/* will not work with display:none and changing to block w/class*/ 
+		
+		/*-webkit-transition: opacity 2s linear;
+    	-moz-transition: opacity 2s linear;
+    	-o-transition: opacity 2s linear;
+    	transition: opacity 2s linear;
+		opacity: 0.0; */
+	}
+	#navigation.large {
+		display:block;
+		font-size:22px;
+		position:absolute;
+		top:175px;
+		left:45px;
+		/*position:relative;
+		top:0px;
+		left:-50px;*/
+		/*opacity: 1; */
+	}
+	li {
+		display:block;
+		margin-left: 0px;
+		padding-bottom: 25px;
+		padding-right: 0px;
+	}
+	#socialmedia {
+		width:29px;
+		height:29px;
+		background: url("../image/inLogo-Large.png") no-repeat left;
+	}
+	article {
+		padding-top:20px;
+		padding-bottom:10px;
+		padding-left:15px;
+		margin-left:auto;
+		margin-right:auto;
+	}
+	section {
+		max-width: 300px;
+		font-size:12px;
+		display:block;
+	}
+}
+
+/* ------------------------------------------------------------- */
+/* THIS IS THE BASE FOR ALL SCREENS LARGER THAN THE MOBILE PHONE */
+/* ------------------------------------------------------------- */
+
+/* Full Desktop Screen min-width:451- Make Logo Large and Show Line */
+@media only screen and (min-width:451px) {
+	#holder {
+		/*min-height: 700px;*/
+		max-width:900px;
+		height:auto;
+	}
+	header {
+		border-bottom:2px solid #814B2A;
+		border-image:linear-gradient(0deg, #814B2A, #E68B57, #814B2A);
+		border-image-slice:1;
+	}
+	header #logo {
+		/*width:287px;
+		height:117px;/* /* Defined in the base in case it needs to hold the div and not jump on load */
+		background: url("../image/Logo-Large.png") no-repeat center;
+	}
+	li {
+		padding-right:0;
+		margin-right:6vw;
+	}
+}
+
+
